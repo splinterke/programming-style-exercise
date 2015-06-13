@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function readFile(file,top)  //'file' is the .txt; 'top' is how many top words to display
+{
+var xmlhttp,xmlhttp_sw;
+var content;
+var stop_words = [];
+var target = [];
+var no_repeat = [];
+var no_repeat_frequency = [];
+var to_sort = [];
+
+// read stop_words file into array
+xmlhttp_sw=new XMLHttpRequest();
+xmlhttp_sw.open("GET","../stop_words.txt",true);
+xmlhttp_sw.send();
+xmlhttp_sw.onreadystatechange=function()
+  {
+  if (xmlhttp_sw.readyState==4 && xmlhttp_sw.status==200)
+    {
+        content = xmlhttp_sw.responseText;
+        stop_words=content.split(",");
+		stop_words.push("s");  //'s' is a special situation, such as Elizabeth's
+        
+        // read target file into array
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET",file,true);
+        xmlhttp.send();
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                content = xmlhttp.responseText;
+				// clean and split the content
+				content = content.toLowerCase();
+                content = content.replace(/[_]/g,'');
+				target = content.split(/[\W0-9]+/g);
+				
+				for(i=0;i<target.length;i++)
+				{
+					//check if a certain word is in stop_words list
+					var n = stop_words.indexOf(target[i]);
+            		if(n===-1)
+					{
+						//check if a certain word has already been archived. If so, the related count +1. otherwise, archive the word and related count =1
+						var m = no_repeat.indexOf(target[i]);
+						if(m===-1)
+						{
+						    no_repeat.push(target[i]);
+							no_repeat_frequency.push(1);
+						}
+						else
+						{
+						    no_repeat_frequency[m]+=1;
+						}
+					}
+				}
+				
+				//copy 'no_repeat_frequency' into 'to_sort', so sorting won't influence original array
+				for(j=0;j<no_repeat_frequency.length;j++)
+				{
+				    to_sort.push(no_repeat_frequency[j]);
+				}
+				to_sort.sort(function(a, b){return b-a});
+				
+				//display from the highest frequency
+				document.getElementById("myDiv").innerHTML="";				
+				for(k=0;k<top;k++)
+				{
+				    var p = to_sort[k];
+					var q = no_repeat_frequency.indexOf(p);
+					document.getElementById("myDiv").innerHTML+="<br>" + no_repeat[q] + "----" + p;
+					no_repeat_frequency[q] = 0;
+				}  
+            }
+        }
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>Welcome to Term Frequency Program</h2>
+<form>
+Input the file name:
+<input name="path" type = "text" value = "pride-and-prejudice.txt">
+<br><br>
+How many top words:
+<input name="num" type = "number" value = "25">
+<br><br>
+<button type="button" onclick="readFile(this.form.path.value,this.form.num.value)">Let's Roll</button>
+</form>
+
+<div id="myDiv"></div>
+
+</body>
+</html>

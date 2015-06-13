@@ -1,0 +1,21 @@
+Linda is a model of coordination and communication among several parallel processes \
+operating upon objects stored in and retrieved from shared, virtual, associative memory. \
+It is a tool which is a machine-independent and portable programming vehicle, \
+which absolves parallel programmers from dealing with spatial and temporal relationships \
+among parallel processes, which allow dynamically distributing tasks at runtime, \
+and can be implemented on existing hardware. 
+
+Linda is implemented as a "coordination language" in which several primitives operating \
+on ordered sequence of typed data objects, "tuples", are added to a sequential language. \
+And a logically global associative memory, called a tuplespace, in which processes store \
+and retrieve tuples. The four operations that individual workers perform on the tuples and the tuplespace include: 
+
+in: atomically reads and removes—consumes—a tuple from tuplespace
+rd: non-destructively reads a tuplespace
+out: produces a tuple, writing it into tuplespace
+eval: creates new processes to evaluate tuples, writing the result into tuplespace
+
+Whereas message-passing models require tightly-coupled processes sending messages to \
+each other in some sequence or protocol, Linda processes are decoupled from other processes, \
+communicating only through the tuplespace; a process need have no notion of other processes \
+except for the kinds of tuples consumed or produced (data coupling).

@@ -1,0 +1,13 @@
+This article discusses about a so-called Relational Model, which I think is a data base Model, \
+in order to make activities of users unaffected when internal representation of data is changed. \
+The term “Relation” means the sets of data have same domains of category, and normally one domain \
+has values which uniquely identify each element of that relation and is named “primary key”.
+
+Given a relational model of data, different operations on relations can be applied. They include: \
+permutation, projection, join, composition and restriction. This is bound to become a serious practical problem \
+when more and more different types of data are integrated together into common data banks.
+
+A set of relations is strongly redundant if it contains at least one relation that possesses a projection \
+from other projections of relations. Weak projection means a set of relations has a projection \
+which is at all times from a projection of some join of other relations. Whenever the set of relations \
+is redundant in either sense, we shall associate it with statements which hold independent of time between member relations.

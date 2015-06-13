@@ -1,0 +1,15 @@
+This article talks about the concept of typed language, the advantage and disadvantage of it, \
+and how it is realized in several languages. A strongly typed language is the one which \
+tends to generate an error or refuse to compile a program if the argument does not closely match the expected type.
+
+The primary purpose of having a typed language is to maintain safety. The safety under such context means \
+not to trigger untrapped errors, which are the errors going unnoticed and later causing arbitrary behavior. \
+However being typed does not necessarily mean safe. For example, we have typed but unsafe language like C, \
+and we have untyped but safe language like LISP.
+
+The advantage of typed language includes the economy of execution and the economy in development. \
+What’s more, being typed also helps in development and maintenance in security areas. For example, \
+in an untyped language where integer can be casted into pointer, an attacker may take advantage of it \
+to access data anywhere in the system. While this is unlikely to occur in a typed system. \
+However a language also has to pay recourse to maintain its type system, and that’s why \
+some languages emphasizing on efficiency, such as C, does not use a strongly typed system.

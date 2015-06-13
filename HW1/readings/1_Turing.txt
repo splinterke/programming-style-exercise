@@ -1,0 +1,15 @@
+Turing write this article to discuss if computers can be used to fill the gap of our knowledge and uncover the light of truth.
+
+First he conceive a machine that can write symbols on a tape and can operation on the tape based on finite rules.\
+It can move Left, Right, and it can Erase and Print. Turing illustrate that the information on the tape is capable\
+of representing computable numbers and make calculations.
+
+When this machine comes to solve a problem, it will finally either stop and give the answer, or run forever if the answer did not exist.\
+Turing proved that computable sequences are not enumerable with diagonal process.
+
+Then he discussed if the Entscheidungsproblem can be solved. Turing mathematically proved that you can never know if the machine will stop,\
+so decidability can not be reached, and hence Entscheidungsproblem can not be solved.
+
+I believe this is the most difficult paper I ever read, however the idea is straightforward.\
+We can not investigate the true truth, because the process of our investigation is not calculated.\
+This is similar to Relativity and Uncertainty Principle in physics.

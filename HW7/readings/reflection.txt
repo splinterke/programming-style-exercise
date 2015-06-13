@@ -1,0 +1,16 @@
+Computational reflection is the activity performed by a computational system when doing \
+computation about its own computation. A reflective system 1) always has an accurate representation \
+of itself and 2) the status and computation of the system are always in compliance with its representation. \
+This means it can actually bring modifications to itself by virtue of its own computation. 
+
+A programming language which has a reflective architecture provides tools for handling reflective computation \
+explicitly. Thus, 1) the interpreter of such a language has to give any system that is running access to \
+data representing the system itself. Systems implemented in such a language then have the possibility to \
+perform reflective computation by including code that prescribes how these data may be manipulated. \
+2) the interpreter also has to guarantee that the causal connection between these data and the aspects \
+of the system they represent is fulfilled. Consequently, the modifications these systems make to their \
+self-representation are reflected in their own status and computation.
+
+The experiment of 3-KRS introduced a new concept being the notion of a meta-object. Meta-objects are \
+just like the other objects of the language, except that they represent information about the computation \
+performed by other objects and that they are also taken into account by the interpreter of the language when running a system. 

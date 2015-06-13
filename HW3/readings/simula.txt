@@ -1,0 +1,13 @@
+Simula introduced objects, classes, inheritance and subclasses, virtual methods, \
+coroutines, and discrete event simulation, and features garbage collection. \
+Simula is considered the first object-oriented programming language. \
+It is said that Simula contains facilities that up to now have not been fully \
+utilized and not even understood by not only general programming public but also people from OOP community.
+
+As its name implies, Simula was designed for doing simulations, and the needs of that domain \
+provided the framework for many of the features of object-oriented languages today. \
+In the late 1960s, the Norwegian developers of Simula, O. J. Dahl and Kristen Nygaard, \
+were looking for a way for programs to simulate or model the world as computer users see it. \
+They conceived the idea that programmers should model programs around object s rather than procedures. \
+They also invented the idea of classes so that objects could be developed that shared similar characteristics. \
+So that objects could communicate and make requests of each other, they conceived the simple notion of the message.

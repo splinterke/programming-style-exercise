@@ -1,0 +1,15 @@
+This article analyzes the function of monad by considering the case of modifying an interpreter. \
+In functional programming, a monad is a structure that represents computations defined as sequences of steps: \
+a type with a monad structure defines what it means to chain operations, or nest functions of that type together. \
+This allows the programmer to build pipelines that process data in steps, in which each action is decorated with \
+additional processing rules provided by the monad.
+
+Multiple tasks are applied for the interpreter to show that monad increase the ease to modify programs, \
+including adding error messages, state, output, etc. We can see that monad can handle both the call-by-value \
+and call-by-name situation. A comparison between monad and continuation-passing style shows that \
+monad offers more freedom on the choice of escape facility, while CPS provides no such choice.
+
+The concept of monad programming appeared in the 1980s even though it was called "commands" and \
+never formally specified. Eugenio Moggi first described the general use of monads to structure programs in 1991. \
+Early versions of Haskell used a problematic "lazy list" model for I/O, and Haskell 1.3 introduced monads as a \
+more flexible way to combine I/O with lazy evaluation.

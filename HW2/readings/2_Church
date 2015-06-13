@@ -1,0 +1,14 @@
+This article, same as the Turing article, gives a negative answer to the Entscheidungsproblem. \
+This is done by Alonzo Church with the concept of "effective calculability" based on his lambda calculus.
+
+Lambda calculus is a formal system in mathematical logic for expressing computation \
+based on function abstraction and application using variable binding and substitution. \
+It describes the sequence of performing functional computation. \
+Church define the notion of an effectively calculable function of positive integers \
+by identifying it with the notion of a recursive function of positive integers.
+
+Background: In mathematics and computer science, a formal language \
+is a set of strings of symbols that may be constrained by rules that are specific to it. \
+A well-formed formula, often simply formula, is a word (i.e. a finite sequence of symbols from a given alphabet) \
+that is part of a formal language. And a Gödel numbering is a function that assigns to each symbol \
+and well-formed formula of some formal language a unique natural number, called its Gödel number.

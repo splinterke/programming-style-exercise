@@ -1,0 +1,14 @@
+The Representational State Transfer (REST) style is an abstraction of the architectural \
+elements within a distributed hypermedia system. REST ignores the details of component \
+implementation and protocol syntax in order to focus on the role of components, the constrains \
+upon their interaction, and their interpretation of significant data elements. 
+
+The architectural views are used to describe how the elements work together to form an architecture. \
+Three types of view are important to REST: process, connector and data. The process is primarily \
+effective at showing the interaction relationships. The connector concentrates on the communication \
+between components. And the data reveals the application state.
+
+The formal REST constraints are: Client-server, Stateless, Cacheable, Layered system, Code on demand \
+and Uniform interface. REST is a coordinated set of constraints applied to the design of components \
+in a distributed hypermedia system that can lead to a more performant and maintainable architecture. \
+REST has gained widespread acceptance across the Web as a simpler alternative to SOAP and WSDL-based Web services.

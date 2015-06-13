@@ -1,0 +1,3 @@
+Cyclomatic complexity = 5 + 8 + 1 = 14
+num of "for": 5
+num of "if": 8
